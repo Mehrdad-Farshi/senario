@@ -1,0 +1,20 @@
+micronaut:
+  security:
+    enable: true
+    token:
+      jwt:
+        signatures:
+          generator:
+            secret: "123456789"
+  server:
+    cores:
+      enabled: true
+      configurations:
+        all:
+          allowedOrigins:
+            - http://localhost:3000
+akhq:
+  connections:
+    local:
+      properties:
+        bootstrap.servers: "PLAINTEXT://kafka:9092"
